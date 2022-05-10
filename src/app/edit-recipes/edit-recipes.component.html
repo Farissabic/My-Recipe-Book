@@ -1,0 +1,20 @@
+<form [formGroup]="EditRecipeForm" (submit)="EditRecipe()">
+    <div class="in-forme">
+        <h2>Edit Recipe</h2>
+        <input [value]="recipe?.title" formControlName="title"  type="text" name="title">
+        <p class="w"  *ngIf="fc['title'].touched && fc['title'].invalid">This field is required!</p>
+        <input [value]="recipe.picture" formControlName="picture" type="text" name="picture" placeholder="Picture">
+        <p class="w"  *ngIf="fc['picture'].touched && fc['picture'].invalid">This field is required!</p>
+        <div class="image" *ngIf="fc['picture'].value">
+            <img [src]="fc['picture'].value" alt="">
+        </div>
+        <textarea [value]="recipe.desc" formControlName="desc" name="desc"  cols="30" rows="10"></textarea>
+        <p class="w"  *ngIf="fc['desc'].touched && fc['desc'].invalid">This field is required!</p>
+        <div class="buttons">
+            <button type="submit">Edit</button>
+            <button (click)="delete()">Delete</button>
+        </div>
+        
+    </div>
+</form>
+

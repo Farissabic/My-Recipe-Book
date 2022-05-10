@@ -1,0 +1,41 @@
+<nav>
+    <div class="container">
+        <div class="logo">
+            <h3>My Recipe Book</h3>
+            <i class="fa-solid fa-book"></i>
+        </div>
+        <div class="options">
+            <button routerLink="/">Back</button>
+            <button class="logoutB" (click)="logOut()">Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </div>
+    </div>
+</nav>
+
+<section class="my-recipes">
+    <div class="buttonAdd" fragment="recipe" (click)="navigateToSection('recipe')">
+        <button routerLink="new" >Add New Recipe</button>
+    </div>
+    <div class="container">
+        <div class="recipes">
+            <div class="recipes-in" *ngFor="let Recipe of Recipes " fragment="recipe" (click)="navigateToSection('recipe')">
+                <div class="recipe"  [routerLink]="['edit',Recipe.id]" >
+                    <div class="image">
+                        <img src="{{Recipe.data.picture}}" alt="">
+                    </div>
+                    <h4>{{Recipe.data.title}}</h4>
+                </div>
+            </div>
+
+        </div>
+        <div id="recipe"  class="recipe-menu">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="copyright">
+        Copyright &copy; Faris Sabic
+    </div>
+</footer>

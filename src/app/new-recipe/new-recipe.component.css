@@ -1,0 +1,65 @@
+
+
+form .in-forme{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+form .in-forme h2{
+    color: white;
+    margin-bottom: 6rem;
+}
+
+form .in-forme input,textarea{
+    padding: 1rem;
+    border-radius: 20px;
+    width: 100%;
+}
+
+form .in-forme textarea{
+    height: 40rem;
+}
+
+
+form .in-forme button{
+    padding: 1rem 4rem;
+    width: fit-content;
+    background: white;
+    color: #064635;
+    font-size: 1.1rem;
+    transition: 300ms ease;
+    cursor: pointer;
+}
+
+form .in-forme p{
+    color: rgb(216, 213, 213);
+    width: 100%;
+    text-align: start;
+}
+
+form .in-forme button:hover{
+    background: #064635;
+    color: white;
+}
+
+form .in-forme .image{
+    width: 100%;
+    border-radius: 20px;
+}
+
+form .in-forme .image img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width:1000px){
+
+    form .in-forme h2{
+       margin-bottom: 2rem;
+    }
+
+}

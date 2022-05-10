@@ -1,0 +1,114 @@
+nav{
+    height: 6rem;
+    background: #064635;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav .container .logo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .container .logo h3{
+    color: white;
+}
+
+nav .container .logo i {
+    font-size: 2rem;
+}
+
+nav .container .options{
+    display: flex;
+}
+
+nav .container .options button{
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background:transparent;
+    color: white;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+nav .container .options button:hover{
+    background: #519259;
+}
+
+section.recipe{
+    margin-top: 6rem;
+    background: #519259;
+    padding-top: 4rem;
+}
+
+section.recipe .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+section.recipe .container h2{
+    color: white;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+section.recipe .container img{
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+section.recipe .container p{
+    color: white;
+    width: 100%;
+}
+
+footer{
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .copyright{
+    color: #064635;
+}
+
+
+@media screen and (max-width:500px){
+
+    nav .container .logo h3{
+        display: none;
+    }
+
+    nav .container .options button{
+        background: #519259;
+    }
+
+    nav .container .options .logoutB{
+        display: none;
+    }
+
+    section.recipe .container{
+       
+        width: 90%;
+    }
+}

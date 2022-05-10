@@ -1,0 +1,15 @@
+<form [formGroup]="newRecipeForm" (submit)="addRecipe()">
+    <div class="in-forme">
+        <h2>Add New Recipe</h2>
+        <input formControlName="title" type="text" name="title" placeholder="Title">
+        <p class="w"  *ngIf="fc['title'].touched && fc['title'].invalid">This field is required!</p>
+        <input formControlName="picture" type="text" name="picture" placeholder="Picture">
+        <p class="w"  *ngIf="fc['picture'].touched && fc['picture'].invalid">This field is required!</p>
+        <div class="image" *ngIf="fc['picture'].value">
+            <img [src]="fc['picture'].value" alt="">
+        </div>
+        <textarea formControlName="desc" name="desc"  cols="30" rows="10"></textarea>
+        <p class="w"  *ngIf="fc['desc'].touched && fc['desc'].invalid">This field is required!</p>
+        <button type="submit">Add</button>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+<section class="signeUp">
+    <h1>My Recipe Book  <i class="fa-solid fa-book"></i></h1>
+    <div class="container">
+        <form [formGroup]="signeUpForm" (ngSubmit)="submit()">
+            <div class="in-form">
+                <h2>Signe Up</h2>
+                <input formControlName="name" type="text" name="name" placeholder="Name">
+                <p class="w"  *ngIf="fc['name'].touched && fc['name'].invalid">This field is required!</p>
+                <input formControlName="email" type="text" name="email" placeholder="E-mail">
+                <p class="w"  *ngIf="fc['email'].touched && fc['email'].invalid">This field is required!</p>
+                <input formControlName="password" type="password" name="password" placeholder="password">
+                <p class="w"  *ngIf="fc['password'].touched && fc['password'].invalid">This field is required!</p>
+                <p>Already have account <a routerLink="/login">Login</a></p>
+                <button type="submit">Signe Up<i class="fa-solid fa-user-plus"></i></button>
+            </div>
+        </form>
+    </div>
+</section>

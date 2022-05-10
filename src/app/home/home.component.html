@@ -1,0 +1,58 @@
+<nav>
+    <div class="container">
+        <div class="logo">
+            <h3>My Recipe Book</h3>
+            <i class="fa-solid fa-book"></i>
+        </div>
+        <button (click)="logOut()">Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+    </div>
+</nav>
+<section class="landing">
+    <div class="over">
+        <div class="container">
+            <h1>Welcome {{user}}</h1>
+            <h3>Bring out the smart chef in you and bring compliments your way</h3>
+            <a routerLink="/my-recipes">My Recipes ...</a>
+        </div>
+    </div>
+</section>
+<section class="my-recipes">
+    <div class="container">
+        <h2>My Recipes</h2>
+        <div class="recipes">
+            <div class="recipe" *ngFor="let Recipe of MyRecipes; let i = index">
+                <div *ngIf="i<=3">
+                    <img src="{{Recipe.data.picture}}" alt="">
+                    <h3>{{Recipe.data.title}}</h3>
+                    <p>{{Recipe.data.desc}}</p>
+                    <button  [routerLink]="['my-recipes/edit',Recipe.id]">See more...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="suggested-recipes">
+    <div class="container">
+        <h2>Suggested Recipes</h2>
+        <div class="recipes">
+            <div class="recipe" *ngFor="let Recipe of Recipes">
+                <img src="{{Recipe.data.picture}}" alt="">
+                <h3>{{Recipe.data.title}}</h3>
+                <p>{{Recipe.data.desc}}</p>
+                <button  [routerLink]="['view',Recipe.id]" >See more...</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="copyright">
+        Copyright &copy; Faris Sabic
+    </div>
+</footer>
+
+
+
+
+

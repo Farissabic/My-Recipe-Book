@@ -1,0 +1,26 @@
+<nav>
+    <div class="container">
+        <div class="logo">
+            <h3>My Recipe Book</h3>
+            <i class="fa-solid fa-book"></i>
+        </div>
+        <div class="options">
+            <button routerLink="/">Back</button>
+            <button class="logoutB" (click)="logOut()">Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </div>
+    </div>
+</nav>
+
+<section class="recipe">
+    <div class="container">
+       <h2> {{recipe.title}}</h2>
+       <img src="{{recipe.picture}}" alt="">
+       <p>{{recipe.desc}}</p>
+    </div>
+</section>
+
+<footer>
+    <div class="copyright">
+        Copyright &copy; Faris Sabic
+    </div>
+</footer>

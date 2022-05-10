@@ -1,0 +1,231 @@
+
+
+nav{
+    height: 6rem;
+    background: #064635;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav .container .logo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+nav .container .logo i{
+    font-size: 2rem;
+}
+
+nav .container button{
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background:transparent;
+    color: white;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+nav .container button:hover{
+    background: #519259;
+}
+
+section.landing{
+    margin-top: 6rem;
+    background: url(/assets/home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+    padding: 0;
+}
+
+section.landing .over{
+    background: #51925979;
+    height: 100%;
+    height: 100%;
+}
+
+section.landing .over .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+section.landing .over .container h1,h3{
+    color: white;
+    text-align: center;
+}
+
+section.landing .over .container a{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    color: white;
+    background: #519259;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0rem 1rem 2.5rem black;
+    transition: 300ms ease ;
+}
+
+section.landing .over .container a:hover{
+    transform: scale(1.1);
+    background: #064635;
+}
+
+section.my-recipes{
+    padding-top: 3rem;
+}
+
+section.my-recipes .container h2{
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #064635;
+}
+
+section.my-recipes .container .recipes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+section.my-recipes .container .recipes .recipe h3{
+    color: #064635;
+}
+section.my-recipes .container .recipes .recipe p{
+    color: #519259;
+    width: 100%;
+    height: 3.3rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+section.my-recipes .container .recipes .recipe img{
+    width: 100%;
+}
+
+section.my-recipes .container .recipes .recipe button{
+    padding: 1rem;
+    color: white;
+    background: #064635;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: 300ms ease;
+    cursor: pointer;
+}
+
+section.my-recipes .container .recipes .recipe button:hover{
+    background:#519259;
+
+}
+
+
+
+section.suggested-recipes{
+    background:#064635;
+    padding-top: 3rem;
+}
+
+section.suggested-recipes .container h2{
+    text-align: center;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+section.suggested-recipes .container .recipes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+section.suggested-recipes .container .recipes .recipe h3{
+    color: white;
+}
+section.suggested-recipes .container .recipes .recipe p{
+    color: rgb(194, 193, 193);
+    width: 100%;
+    height: 3.3rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+section.suggested-recipes .container .recipes .recipe img{
+    width: 100%;
+}
+
+section.suggested-recipes .container .recipes .recipe button{
+    padding: 1rem;
+    color:  white;
+    background: #519259;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: 300ms ease;
+    cursor: pointer;
+}
+
+section.suggested-recipes .container .recipes .recipe button:hover{
+    background:white;
+    color: #064635;
+}
+
+footer{
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .copyright{
+    color: #064635;
+}
+
+
+@media screen and (max-width:1200px){
+   
+    section.my-recipes .container .recipes, section.suggested-recipes .container .recipes{
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+    section.my-recipes .container .recipes .recipe button, section.suggested-recipes .container .recipes .recipe button{
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+
+    
+
+    nav .container .logo h3{
+        display: none;
+    }
+
+    nav .container button{
+        font-size: 1rem;
+        background: #519259;
+    }
+   
+    section.my-recipes .container .recipes, section.suggested-recipes .container .recipes{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+}
