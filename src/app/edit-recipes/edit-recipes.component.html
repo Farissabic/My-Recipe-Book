@@ -1,7 +1,7 @@
 <form [formGroup]="EditRecipeForm" (submit)="EditRecipe()">
     <div class="in-forme">
         <h2>Edit Recipe</h2>
-        <input [value]="recipe?.title" formControlName="title"  type="text" name="title">
+        <input [value]="recipe.title" formControlName="title"  type="text" name="title">
         <p class="w"  *ngIf="fc['title'].touched && fc['title'].invalid">This field is required!</p>
         <input [value]="recipe.picture" formControlName="picture" type="text" name="picture" placeholder="Picture">
         <p class="w"  *ngIf="fc['picture'].touched && fc['picture'].invalid">This field is required!</p>

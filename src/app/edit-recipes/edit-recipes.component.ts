@@ -11,9 +11,10 @@ import { RecipesService } from '../service/recipes.service';
 })
 export class EditRecipesComponent implements OnInit {
 
-  EditRecipeForm: FormGroup  = this.fb.group({});
+  
   recipe : any;
   id: string = '';
+  EditRecipeForm: FormGroup  = this.fb.group({});
 
   constructor(private recipeService : RecipesService, private rout : ActivatedRoute,  private fb : FormBuilder) {
 

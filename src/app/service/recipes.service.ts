@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
+import { Recipe } from '../home/models/recipe';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -51,7 +52,7 @@ export class RecipesService {
   }
 
 
-  UpdateRecipe(data:any,id:string){
+  UpdateRecipe(data:Recipe,id:string){
     this.afs.collection('Recipes').doc(id).update(data);
     this.router.navigate(['/my-recipes']);
   }
